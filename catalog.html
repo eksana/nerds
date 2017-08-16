@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
+          <img src="img/index-logo.svg" width="150"  height="180" alt="nerds-дизайн-студия из Краснодара">
+        </a>
+        <ul class="site-navigation">
+          <li><a href="studio.html">Студия</a></li>
+          <li><a href="сustomers">Клиенты</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <section class="cart-block">
+            <h2 class="visually-hidden">Меню корзина</h2>
+          <a class="cart" href="#">Корзина</a>
+        </section>
+      </nav>
+    </header>
+    <main class="container">
+    <h1 class="main-header">Магазин готовых шаблонов</h1>
+    <section class="filters">
+      <h2 class="visually-hidden">Фильтры для шаблонов</h2>
+      <form class="filter" method="get" action="https://echo/htmlacademy.ru">
+        <fieldset>
+          <legend>Стоимость:</legend>
+          <p><input type="range" min="0" max="15000" multiple></p>
+          <p> от <span><input type="text" placeholder="0"></span> до <span><input type="text" placeholder="15000"></span></p>
+        </fieldset>
+        <fieldset>
+          <legend>Сетка:</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio"
+                type="radio" name="grid-group" value="adaptive" checked>
+                Адаптивная</li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio"
+                type="radio" name="grid-group" value="fixed">
+                Фиксированная</li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio"
+                type="radio" name="grid-group" value="stretchy">
+                Резиновая</li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Особенности:</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                type="checkbox" name="slider" checked>
+                Слайдер</li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                type="checkbox" name="features-block">
+                Блок преимуществ</li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                type="checkbox" name="news" checked>
+                Новости</li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                type="checkbox" name="gallery">
+                Галерея</li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                type="checkbox" name="cart">
+                Корзина</li>
+          </ul>
+        </fieldset>
+      </section>
+      <section class="catalog">
+        <h2 class="visually-hidden">Список и опция сортировки шаблонов</h2>
+        <section class="sort">
+          <span>Сортировать:</span>
+          <form class="sort-nav">
+            <button class="sort-nav-button button-text">по цене</button>
+            <button class="sort-nav-button button-text">по типу</button>
+            <button class="sort-nav-button button-text">по названию</button>
+            <button class="sort-nav-button button-expensive"></button>
+            <button class="sort-nav-button button-cheap"></button>
+          </form>
+        </section>
+        <ul class="templates">
+          <li class="template-item">
+            <a href="catalog-item.html">
+              <img src="img/template-1.jpg" width="220" height="165" alt="шаблон &#171;Седона&#187;">
+            </a>
+          </li>
+          <li class="template-item">
+            <a href="catalog-item.html">
+              <img src="img/template-2.jpg" width="220" height="165" alt="Ншаблон &#171;пинк&#187;">
+            </a>
+          </li>
+          <li class="template-item">
+            <a href="catalog-item.html">
+              <img src="img/template-3.jpg" width="220" height="165" alt="шаблон &#171;барбершоп&#187;">
+            </a>
+          </li>
+          <li class="template-item">
+            <a href="catalog-item.html">
+              <img src="img/template-4.jpg" width="220" height="165" alt="шаблон &#171;мишка&#187;">
+            </a>
+          </li>
+          <li class="template-item">
+            <a href="catalog-item.html">
+              <img src="img/template-5.jpg" width="220" height="165" alt="шаблон &#171;А+&#187;">
+            </a>
+          </li>
+          <li class="template-item">
+            <a href="catalog-item.html">
+              <img src="img/template-6.jpg" width="220" height="165" alt="шаблон &#171;Кваст&#187;">
+            </a>
+          </li>
+        </ul>
+        <ul class="pagination-list">
+          <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+          <li class="pagination-item">2</li>
+          <li class="pagination-item"><a href="#">3</a></li>
+          <li class="pagination-item pagination-item-next"><a href="#">Следующая</a></li>
+        </ul>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <h3 class="visually-hidden">Контактная информация дизайн-студии nerds</h3>
+      <section class="map">
+        <h3 class="visually-hidden">Карта местоположения дизайн-студии nerds</h3>
+        <img src="#" width="1200"  height="416" alt="карта расположения дизайн-студии nerds">
+        <section class="footer-contacts">
+          <h3 class="visually-hidden">Адрес, телефон и обратная связь дизайн-студии nerds</h3>
+          <p>
+            NЁRDS DESIGN STUDIO<br>
+            191186, Санкт-Петербург, ул. Большая Конюшенная, д. 19/8<br>
+            тел. +7 (812) 275-75-75<br>
+          </p>
+          <a class="button" href="#">напишите нам</a>
+        </section>
+      </section>
+      <section class="footer-social">
+        <ul>
+          <li>
+            <a class="social-button social-button-vk" href="#">Вконтакте</a>
+          </li>
+          <li>
+            <a class="social-button social-button-fb" href="#">Фейсбук</a>
+          </li>
+          <li>
+            <a class="social-button social-button-inst" href="#">Инстаграм</a>
+          </li>
+        </section>
+        <section class="footer-friends">
+          <b>Давайте дружить, это выгодно!</b>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </section>
+    </footer>
+  </body>
+</html>
