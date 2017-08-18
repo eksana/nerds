@@ -2,8 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <title>HTML Academy: Нёрдс - главная страница</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <header class="main-header">
@@ -17,10 +17,9 @@
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-        <section class="cart-block">
-            <h2 class="visually-hidden">Меню корзина</h2>
-          <a class="cart" href="#">Корзина</a>
-        </section>
+        <ul class="cart-block">
+          <li> <a class="cart" href="#">Корзина</a></li>
+        </ul>
       </nav>
     </header>
     <main class="container">
@@ -29,102 +28,90 @@
         <h2 class="visually-hidden">Преимущества дизайн-студии nerds</h2>
         <section class="slider">
           <h3 class="visually-hidden"> Иллюстрации к преимуществам дизайн-студии nerds</h3>
-          <ul class="slider-inputs">
-            <li class="slider-input">
-              <input type="radio" id="button-1" name="toggle" checked>
-            </li>
-            <li class="slider-input">
-              <input type="radio" id="button-2" name="toggle">
-            </li>
-            <li class="slider-input">
-              <input type="radio" id="button-3" name="toggle">
-            </li>
-          </ul>
-          <ul class="slider-imgs">
-            <li class="slider-img">
-              <lebel for="button-1"><img src="img/#.svg" width="200" height="100" alt="
-                  галерея преимуществ nerds"></lebel>
-            </li>
-            <li class="slider-img visually-hidden">
-              <lebel for="button-2"><img src="img/#.svg" width="200" height="100" alt="
-                  галерея преимуществ nerds"></lebel>
-            </li>
-            <li class="slider-img visually-hidden">
-              <lebel for="button-3"><img src="img/#.svg" width="200" height="100" alt="
-                  галерея преимуществ nerds"></lebel>
-            </li>
-          </ul>
+          <div class="slider-inputs">
+            <input type="radio" id="button-1" name="toggle" checked>
+            <input type="radio" id="button-2" name="toggle">
+            <input type="radio" id="button-3" name="toggle">
+          </div>
+          <!-- <div class="slider-lebels">
+            <lebel for="button-1"><img src="img/slider-1.png" width="620"  height="126" alt="Математически дизайн для сайта или мобильного приложения от nerds"></lebel>
+            <lebel for="button-2"><img src="img/slider-1.png" width="620"  height="126" alt="Nerds за креатив и возможность все посчитать"></lebel>
+            <lebel for="button-3"><img src="img/slider-1.png" width="620"  height="126" alt="Галерея преимуществ nerds"></lebel>
+          </div> -->
+          <div class="slider-inner">
+            <div class="slider-block">
+              <div class="slider-item slider1">
+                <b class="features-name">Долго, дорого, скурпулезно.</b>
+                <p>Математически выверенный дизайн для вашего сайта
+                                        или мобильного приложения.</p>
+                <a class="button" href="#">Узнать больше</a>
+              </div>
+              <div class="slider-item slider2">
+                <b class="features-name">Любите ли вы математику, как любим ее мы?</b>
+                <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив,
+                    чтобы дать им возможность все посчитать</p>
+                <a class="button" href="#">Узнать больше</a>
+              </div>
+              <div class="slider-item slider3">
+                <b class="features-name">Только наркотики, только хардкор!</b>
+                <p>Все дизайнерские решения в нашей компании принимаются только
+                      под воздействием качественных галлюциногенов</p>
+                <a class="button" href="#">Узнать больше</a>
+              </div>
+            </div>
+          </div>
         </section>
-        <section class="features-description">
-          <h3 class="visually-hidden"> Описание преимуществ дизайн-студии nerds</h3>
-          <ul>
-            <li class="features-description-item">
-              <b class="feature-name">Долго, дорого, скурпулезно.</b>
-              <p>Математически выверенный дизайн для вашего сайта
-                                      или мобильного приложения.</p>
-              <a class="button" href="#">Узнать больше</a>
-            </li>
-            <li class="features-description-item visually-hidden">
-              <b class="feature-name">Любите ли вы математику, как любим ее мы?</b>
-              <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив,
-                  чтобы дать им возможность все посчитать.</p>
-              <a class="button" href="#">Узнать больше</a>
-            </li>
-            <li class="features-description-item visually-hidden">
-              <b class="feature-name">Только наркотики, только хардкор!</b>
-              <p>Все дизайнерские решения в нашей компании принимаются только
-                    под воздействием качественных галлюциногенов.</p>
-              <a class="button" href="#">Узнать больше</a>
-            </li>
-          </ul>
-        </section>
-        </section>
+      </section>
       <section class="services">
         <h3 class="visually-hidden">Услуги дизайн-студии nerds</h3>
         <ul>
           <li class="services-item">
-            <img src="img/#.png" width="120"  height="70" alt="">
+            <img src="img/#.png" width="120"  height="70" alt="Веб-сайты дизайн-студии Nerds">
             <b>Веб-сайты</b>
             <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="services-item">
-            <img src="img/#.png" width="120"  height="70" alt="">
+            <img src="img/#.png" width="120"  height="70" alt="Приложения дизайн-студии Nerds">
             <b>Приложения</b>
             <p>Покорите топ-10 приложений в AppStore и Google Play</p>
             <a class="button" href="#">Заказать</a>
           </li>
           <li class="services-item">
-            <img src="img/#.png" width="120"  height="70" alt="">
+            <img src="img/#.png" width="120"  height="70" alt="Презентации дизайн-студии Nerds">
             <b>Презентации</b>
             <p>Вы даже не подозреваете, насколько вы изумительны!</p>
             <a class="button" href="#">Заказать</a>
           </li>
         </ul>
       </section>
-      <section class="description">
-        <h3 class="visually-hidden">Описание дизайн-студии nerds</h3>
-        <b>Мы маленькая, но гордая дизайн-студия из Краснодара</b>
-        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива.
-              Работаем не покладая рук, как роботы.</p>
-        <p class="description-header">Выполняем заказы на разработку:</p>
-        <ul>
-          <li>Веб-сайтов любой сложности</li>
-          <li>Мобильных приложений для IOS и Android</li>
-          <li>Слайдшоу и видео для корпоративных презентаций</li>
-        </ul>
-      </section>
-      <section class="working-conditions">
-        <img src="img/#.jpg" width="240"  height="120" alt="nerds-дизайн-студия из Краснодара">
-        <table>
-          <th>с 2004 года любим точность во всем:</th>
-          <tr>
-            <td>146 <span class="percent">%</span></td><td>100 <span class="percent">%</span></td><td>50 <span class="percent">%</span></td>
-          </tr>
-          <tr>
-            <td>Уровень самоотдачи</td><td>Соблюдение сроков</td><td>Минимальная предоплата</td>
-          </tr>
-        </table>
+      <section class="description-conditions">
+        <h3 class="visually-hidden">Описание и условия работы дизайн-студии nerds</h3>
+        <div class="description">
+          <b>Мы маленькая, но гордая дизайн-студия из Краснодара</b>
+          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива.
+                Работаем не покладая рук, как роботы.</p>
+          <p class="description-header">Выполняем заказы на разработку:</p>
+          <ul>
+            <li>Веб-сайтов любой сложности</li>
+            <li>Мобильных приложений для IOS и Android</li>
+            <li>Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
+        </div>
+        <figure class="working-conditions">
+          <img src="img/#.jpg" width="240"  height="120" alt="Nerds - дизайн-студия из Краснодара">
+          <figcaption>
+            <table>
+              <caption>с 2004 года любим точность во всем:</caption>
+              <tr>
+                <td>146 <span class="persent">%</span></td><td>100 <span class="persent">%</span></td><td>50 <span class="persent">%</span></td>
+              </tr>
+              <tr>
+                <td>Уровень самоотдачи</td><td>Соблюдение сроков</td><td>Минимальная предоплата</td>
+              </tr>
+            </table>
+          </figcaption>
+        </figure>
       </section>
       <section class="partners">
         <h3 class="visually-hidden">Партнеры дизайн-студии nerds</h3>
@@ -143,23 +130,23 @@
           </li>
         </ul>
       </section>
-    </main>
-    <footer class="main-footer">
-      <h3 class="visually-hidden">Контактная информация дизайн-студии nerds</h3>
       <section class="map">
         <h3 class="visually-hidden">Карта местоположения дизайн-студии nerds</h3>
         <img src="#" width="1200"  height="416" alt="карта расположения дизайн-студии nerds">
-        <section class="footer-contacts">
+        <figure class="footer-contacts">
           <h3 class="visually-hidden">Адрес, телефон и обратная связь дизайн-студии nerds</h3>
           <p>
-            NЁRDS DESIGN STUDIO<br>
+            <span class="footer-contacts-header">Nёrds design studio</span><br>
             191186, Санкт-Петербург, ул. Большая Конюшенная, д. 19/8<br>
-            тел. +7 (812) 275-75-75<br>
+            тел. +7 (812) 275-75-75
           </p>
           <a class="button" href="#">напишите нам</a>
-        </section>
+        </figure>
       </section>
-      <section class="footer-social">
+    </main>
+    <footer class="main-footer">
+      <h3 class="visually-hidden">Социальные сети и бонусная информация дизайн-студии nerds</h3>
+      <div class="footer-social">
         <ul>
           <li>
             <a class="social-button social-button-vk" href="#">Вконтакте</a>
@@ -170,11 +157,28 @@
           <li>
             <a class="social-button social-button-inst" href="#">Инстаграм</a>
           </li>
-        </section>
-        <section class="footer-friends">
-          <b>Давайте дружить, это выгодно!</b>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
-        </section>
+        </ul>
+      </div>
+      <div class="footer-friends">
+        <b>Давайте дружить, это выгодно!</b>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+      <section class="contact-us visually-hidden">
+        <h4 class="visually-hidden">Форма обратной связи с дизайн-студией nerds</h4>
+        <b>Напишите нам</b>
+        <div class="contact-us-item">
+          <p>Ваше имя:</p>
+          <input type="text" name="username" size="40" placeholder="Представьтесь, пожалуйста">
+        </div>
+        <div class="contact-us-item">
+          <p>Ваш e-mail:</p>
+          <input type="text" name="email" size="140" placeholder="Для отправки ответа">
+        </div>
+        <div class="contact-us-item">
+          <p>Текст письма:</p>
+          <textarea rows="6" cols="250" placeholder="В свободной форме"></textarea>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
