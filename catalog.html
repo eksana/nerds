@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс</title>
+    <title>HTML Academy: Нёрдс- каталог услуг</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" >
   </head>
   <body>
@@ -30,7 +30,7 @@
       <form class="filter" method="get" action="https://echo/htmlacademy.ru">
         <fieldset>
           <legend>Стоимость:</legend>
-          <p><input type="range" min="0" max="15000" multiple></p>
+          <p><input type="range" min="0" max="15000"></p>
           <p> от <span><input type="text" placeholder="0"></span> до <span><input type="text" placeholder="15000"></span></p>
         </fieldset>
         <fieldset>
@@ -75,10 +75,12 @@
                 Корзина</li>
           </ul>
         </fieldset>
-      </section>
+      </form>
+    </section>
       <section class="catalog">
         <h2 class="visually-hidden">Список и опция сортировки шаблонов</h2>
         <section class="sort">
+          <h2 class="visually-hidden">Опция сортировки шаблонов</h2>
           <span>Сортировать:</span>
           <form class="sort-nav">
             <button class="sort-nav-button button-text">по цене</button>
@@ -133,17 +135,17 @@
       <section class="map">
         <h3 class="visually-hidden">Карта местоположения дизайн-студии nerds</h3>
         <img src="#" width="1200"  height="416" alt="карта расположения дизайн-студии nerds">
-        <section class="footer-contacts">
+        <figure class="footer-contacts">
           <h3 class="visually-hidden">Адрес, телефон и обратная связь дизайн-студии nerds</h3>
           <p>
-            NЁRDS DESIGN STUDIO<br>
+            <span class="footer-contacts-header">Nёrds design studio</span><br>
             191186, Санкт-Петербург, ул. Большая Конюшенная, д. 19/8<br>
-            тел. +7 (812) 275-75-75<br>
+            тел. +7 (812) 275-75-75
           </p>
           <a class="button" href="#">напишите нам</a>
-        </section>
+        </figure>
       </section>
-      <section class="footer-social">
+      <div class="footer-social">
         <ul>
           <li>
             <a class="social-button social-button-vk" href="#">Вконтакте</a>
@@ -154,11 +156,28 @@
           <li>
             <a class="social-button social-button-inst" href="#">Инстаграм</a>
           </li>
-        </section>
-        <section class="footer-friends">
-          <b>Давайте дружить, это выгодно!</b>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
-        </section>
+        </ul>
+      </div>
+      <div class="footer-friends">
+        <b>Давайте дружить, это выгодно!</b>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+      <section class="contact-us visually-hidden">
+        <h4 class="visually-hidden">Форма обратной связи с дизайн-студией nerds</h4>
+        <b>Напишите нам</b>
+        <div class="contact-us-item">
+          <p>Ваше имя:</p>
+          <input type="text" name="username" size="40" placeholder="Представьтесь, пожалуйста">
+        </div>
+        <div class="contact-us-item">
+          <p>Ваш e-mail:</p>
+          <input type="text" name="email" size="140" placeholder="Для отправки ответа">
+        </div>
+        <div class="contact-us-item">
+          <p>Текст письма:</p>
+          <textarea rows="6" cols="250" placeholder="В свободной форме"></textarea>
+        </div>
+      </section>
     </footer>
   </body>
 </html>
