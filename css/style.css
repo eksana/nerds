@@ -1,38 +1,17 @@
 body {
-
+  color: #283136;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Roboto;
+  font-weight: normal;
 }
-h1 {
-
+.visually-hidden {
+  display: none;
 }
-.container {
-
-}
-
-}
-.main-navigation {
-
-}
-li {
-
-}
-.index-logo {
-
-}
-.user-block {
-
-}
-.features {
-
-}
-.slider {
-
-}
-.slider-inner {
-
-}
-.slider-block {
-
-}
-.slider-item {
-
+.main-header {
+  color: #000000;
+  font-size: 55px;
+  line-height: 55px;
+  font-family: Roboto;
+  font-weight: normal;
 }
