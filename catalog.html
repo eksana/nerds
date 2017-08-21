@@ -31,49 +31,61 @@
       <form class="filter" method="get" action="https://echo/htmlacademy.ru">
         <fieldset>
           <legend>Стоимость:</legend>
-          <p><input type="range" min="0" max="15000"></p>
-          <p> от <span><input type="text" placeholder="0"></span> до <span><input type="text" placeholder="15000"></span></p>
+          <label class="visually-hidden" for="filter-coast-regulator">Регулятор диапазона стоимости</label>
+          <input id="filter-coast-regulator" type="range" min="0" max="15000">
+          <label for="filter-coast-from">от</label>
+          <input id="filter-coast-from" type="text" placeholder="0">
+          <label for="filter-coast-to">до</label>
+          <input id="filter-coast-to" type="text" placeholder="15000">
         </fieldset>
         <fieldset>
           <legend>Сетка:</legend>
           <ul>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-radio"
+              <input id="filter-grid-adaptive" class="visually-hidden filter-input filter-input-radio"
                 type="radio" name="grid-group" value="adaptive" checked>
-                Адаптивная</li>
+              <label for="filter-grid-adaptive">Адаптивная</label>
+            </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-radio"
+              <input id="filter-grid-fixed" class="visually-hidden filter-input filter-input-radio"
                 type="radio" name="grid-group" value="fixed">
-                Фиксированная</li>
+              <label for="filter-grid-fixed">Фиксированная</label>
+            </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-radio"
+              <input id="filter-grid-stretchy" class="visually-hidden filter-input filter-input-radio"
                 type="radio" name="grid-group" value="stretchy">
-                Резиновая</li>
+              <label for="filter-grid-stretchy">Резиновая</label>
+            </li>
           </ul>
         </fieldset>
         <fieldset>
           <legend>Особенности:</legend>
           <ul>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox"
+              <input id="filter-option-slider" class="visually-hidden filter-input filter-input-checkbox"
                 type="checkbox" name="slider" checked>
-                Слайдер</li>
+              <label for="filter-option-slider">Слайдер</label>
+            </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox"
+              <input id="filter-option-features" class="visually-hidden filter-input filter-input-checkbox"
                 type="checkbox" name="features-block">
-                Блок преимуществ</li>
+              <label for="filter-option-features">Блок преимуществ</label>
+            </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox"
+              <input id="filter-option-news" class="visually-hidden filter-input filter-input-checkbox"
                 type="checkbox" name="news" checked>
-                Новости</li>
+              <label for="filter-option-news">Новости</label>
+            </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox"
+              <input id="filter-option-gallery" class="visually-hidden filter-input filter-input-checkbox"
                 type="checkbox" name="gallery">
-                Галерея</li>
+              <label for="filter-option-gallery">Галерея</label>
+            </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox"
+              <input id="filter-option-cart" class="visually-hidden filter-input filter-input-checkbox"
                 type="checkbox" name="cart">
-                Корзина</li>
+             <label for="filter-option-cart">Корзина</label>
+            </li>
           </ul>
         </fieldset>
       </form>
@@ -166,18 +178,18 @@
       <section class="contact-us visually-hidden">
         <h4 class="visually-hidden">Форма обратной связи с дизайн-студией nerds</h4>
         <b>Напишите нам</b>
-        <div class="contact-us-item">
-          <p>Ваше имя:</p>
-          <input type="text" name="username" size="40" placeholder="Представьтесь, пожалуйста">
-        </div>
-        <div class="contact-us-item">
-          <p>Ваш e-mail:</p>
-          <input type="text" name="email" size="140" placeholder="Для отправки ответа">
-        </div>
-        <div class="contact-us-item">
-          <p>Текст письма:</p>
-          <textarea rows="6" cols="250" placeholder="В свободной форме"></textarea>
-        </div>
+        <p class="contact-us-item">
+          <label for="contact-us-username">Ваше имя:</label>
+          <input id="contact-us-username" type="text" name="username" size="40" placeholder="Представьтесь, пожалуйста">
+        </p>
+        <p class="contact-us-item">
+          <label for="contact-us-email">Ваш e-mail:</label>
+          <input id="contact-us-email" type="text" name="email" size="140" placeholder="Для отправки ответа">
+        </p>
+        <p class="contact-us-item">
+          <label for="contact-us-text">Текст письма:</label>
+          <textarea id="contact-us-text" rows="6" cols="250" placeholder="В свободной форме"></textarea>
+        </p>
       </section>
     </footer>
   </body>

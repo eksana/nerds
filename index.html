@@ -30,38 +30,39 @@
         <h2 class="visually-hidden">Преимущества дизайн-студии nerds</h2>
         <section class="slider">
           <h3 class="visually-hidden"> Иллюстрации к преимуществам дизайн-студии nerds</h3>
+          <div class="slider-labels">
+            <label for="button-1"><img src="img/slider-1.png" width="698"  height="413" alt="Математически дизайн для сайта или мобильного приложения от nerds"></label>
+            <label for="button-2"><img src="img/slider-2.png" width="663"  height="430" alt="Nerds за креатив и возможность все посчитать"></label>
+            <label for="button-3"><img src="img/slider-3.png" width="759"  height="411" alt="Галерея преимуществ nerds"></label>
+          </div>
           <div class="slider-inputs">
             <input type="radio" id="button-1" name="toggle" checked>
             <input type="radio" id="button-2" name="toggle">
             <input type="radio" id="button-3" name="toggle">
           </div>
-          <!-- <div class="slider-lebels">
-            <lebel for="button-1"><img src="img/slider-1.png" width="698"  height="413" alt="Математически дизайн для сайта или мобильного приложения от nerds"></lebel>
-            <lebel for="button-2"><img src="img/slider-2.png" width="663"  height="430" alt="Nerds за креатив и возможность все посчитать"></lebel>
-            <lebel for="button-3"><img src="img/slider-3.png" width="759"  height="411" alt="Галерея преимуществ nerds"></lebel>
-          </div> -->
-          <div class="slider-inner">
-            <div class="slider-block">
-              <div class="slider-item slider1">
+          <section class="slider-info">
+            <h2 class="visually-hidden">О нас</h2>
+            <ul class="slider">
+              <li class="slide-1">
                 <b class="features-name">Долго, дорого, скурпулезно.</b>
                 <p>Математически выверенный дизайн для вашего сайта
                                         или мобильного приложения.</p>
-                <a class="button" href="#">Узнать больше</a>
-              </div>
-              <div class="slider-item slider2">
+                <p><a class="slider-button button" href="#">Узнать больше</a></p>
+              </li>
+              <li class="slide-2">
                 <b class="features-name">Любите ли вы математику, как любим ее мы?</b>
                 <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив,
-                    чтобы дать им возможность все посчитать</p>
-                <a class="button" href="#">Узнать больше</a>
-              </div>
-              <div class="slider-item slider3">
+                    чтобы дать им возможность все посчитать.</p>
+                <p><a class="slider-button button" href="#">Узнать больше</a></p>
+              </li>
+              <li class="slide-3">
                 <b class="features-name">Только наркотики, только хардкор!</b>
                 <p>Все дизайнерские решения в нашей компании принимаются только
-                      под воздействием качественных галлюциногенов</p>
-                <a class="button" href="#">Узнать больше</a>
-              </div>
-            </div>
-          </div>
+                      под воздействием качественных галлюциногенов.</p>
+                <p><a class="slider-button button" href="#">Узнать больше</a></p>
+              </li>
+            </ul>
+          </section>
         </section>
       </section>
       <section class="services">
@@ -168,18 +169,18 @@
       <section class="contact-us visually-hidden">
         <h4 class="visually-hidden">Форма обратной связи с дизайн-студией nerds</h4>
         <b>Напишите нам</b>
-        <div class="contact-us-item">
-          <p>Ваше имя:</p>
-          <input type="text" name="username" size="40" placeholder="Представьтесь, пожалуйста">
-        </div>
-        <div class="contact-us-item">
-          <p>Ваш e-mail:</p>
-          <input type="text" name="email" size="140" placeholder="Для отправки ответа">
-        </div>
-        <div class="contact-us-item">
-          <p>Текст письма:</p>
-          <textarea rows="6" cols="250" placeholder="В свободной форме"></textarea>
-        </div>
+        <p class="contact-us-item">
+          <label for="contact-us-username">Ваше имя:</label>
+          <input id="contact-us-username" type="text" name="username" size="40" placeholder="Представьтесь, пожалуйста">
+        </p>
+        <p class="contact-us-item">
+          <label for="contact-us-email">Ваш e-mail:</label>
+          <input id="contact-us-email" type="text" name="email" size="140" placeholder="Для отправки ответа">
+        </p>
+        <p class="contact-us-item">
+          <label for="contact-us-text">Текст письма:</label>
+          <textarea id="contact-us-text" rows="6" cols="250" placeholder="В свободной форме"></textarea>
+        </p>
       </section>
     </footer>
   </body>
