@@ -8,8 +8,8 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <header class="main-header">
-      <nav class="main-navigation">
+    <header class="main-header wrapper">
+      <nav class="main-navigation container">
         <a class="main-header-logo">
           <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="160" height="65" viewBox="0 0 160 65">
             <title>Логотип Nerds-дизайн-студии из Краснодара</title>
@@ -18,22 +18,21 @@
         </a>
         <ul class="site-navigation">
           <li><a href="studio.html">Студия</a></li>
-          <li><a href="сustomers">Клиенты</a></li>
+          <li><a href="сustomers.html">Клиенты</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <ul class="cart-block">
           <li>
-            <img src="img/cart-icon.svg" width="15"  height="15" alt="Корзина дизайн-студии  Nerds">
+            <!-- <img src="img/cart-icon.svg" width="15"  height="15" alt="Корзина дизайн-студии  Nerds"> -->
             <a class="cart" href="#">Корзина</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="container">
-      <div class="container-1">
+    <main class="wrapper">
       <h1 class="visually-hidden">nerds-дизайн-студия из Краснодара</h1>
-      <section class="features">
+      <section class="features container">
         <h2 class="visually-hidden">Преимущества дизайн-студии nerds</h2>
         <ul class="slider-buttons">
           <li><button class="slider-button-input"></button></li>
@@ -44,62 +43,70 @@
           <h2 class="visually-hidden">О нас</h2>
           <ul class="slider">
             <li class="slide-1">
-              <div class="slide-1-container-left">
+              <div class="slide-container-left">
                 <b class="features-name">Долго, дорого, скурпулезно.</b>
-                <p>Математически выверенный дизайн для вашего сайта
+                <p><span>Математически выверенный дизайн</span> для вашего сайта
                                         или мобильного приложения.</p>
                 <p><a class="slider-button button" href="#">Узнать больше</a></p>
               </div>
-              <div class="slide-1-container-right">
+              <div class="slide-container-right">
                 <img src="img/slider-1.png" width="698"  height="413" alt="Математически дизайн для сайта или мобильного приложения от nerds">
               </div>
             </li>
             <li class="slide-2 visually-hidden">
-              <b class="features-name">Любите ли вы математику, как любим ее мы?</b>
-              <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив,
+              <div class="slide-container-left">
+                <b class="features-name">Любите ли вы математику, как любим ее мы?</b>
+                <p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив,
                   чтобы дать им возможность все посчитать.</p>
-              <p><a class="slider-button button" href="#">Узнать больше</a></p>
-              <img src="img/slider-2.png" width="663"  height="430" alt="Nerds за креатив и возможность все посчитать">
+                <p><a class="slider-button button" href="#">Узнать больше</a></p>
+              </div>
+              <div class="slide-container-right">
+                <img src="img/slider-2.png" width="663"  height="430" alt="Nerds за креатив и возможность все посчитать">
+              </div>
             </li>
             <li class="slide-3 visually-hidden">
-              <b class="features-name">Только наркотики, только хардкор!</b>
-              <p>Все дизайнерские решения в нашей компании принимаются только
-                    под воздействием качественных галлюциногенов.</p>
-              <p><a class="slider-button button" href="#">Узнать больше</a></p>
-              <img src="img/slider-3.png" width="759"  height="411" alt="Галерея преимуществ nerds">
+              <div class="slide-container-left">
+                <b class="features-name">Только наркотики, только хардкор!</b>
+                <p>Все дизайнерские решения в нашей компании принимаются только
+                      под воздействием качественных галлюциногенов.</p>
+                <p><a class="slider-button button" href="#">Узнать больше</a></p>
+              </div>
+              <div class="slide-container-right">
+                <img src="img/slider-3.png" width="759"  height="411" alt="Галерея преимуществ nerds">
+              </div>
             </li>
           </ul>
         </section>
       </section>
-      <section class="services">
+      <section class="services container">
         <h3 class="visually-hidden">Услуги дизайн-студии nerds</h3>
         <ul class="services-items">
           <li class="services-item">
             <img src="img/illustration-1.png" width="300"  height="146" alt="Веб-сайты дизайн-студии Nerds">
             <b>Веб-сайты</b>
             <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
-            <a class="button services-button-red" href="#">Заказать</a>
+            <a class="button services-button services-button-red" href="#">Заказать</a>
           </li>
           <li class="services-item">
             <img src="img/illustration-2.png" width="300"  height="146" alt="Приложения дизайн-студии Nerds">
             <b>Приложения</b>
             <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-            <a class="button services-button-green" href="#">Заказать</a>
+            <a class="button services-button services-button-green" href="#">Заказать</a>
           </li>
           <li class="services-item">
             <img src="img/illustration-3.png" width="300"  height="146" alt="Презентации дизайн-студии Nerds">
             <b>Презентации</b>
             <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-            <a class="button services-button-yellow" href="#">Заказать</a>
+            <a class="button services-button services-button-yellow" href="#">Заказать</a>
           </li>
         </ul>
       </section>
-      <section class="description-conditions">
+      <div class="grey-line"></div>
+      <section class="description-conditions container">
         <h3 class="visually-hidden">Описание и условия работы дизайн-студии nerds</h3>
-        <div class="description-containier">
           <div class="description">
-            <b>Мы маленькая, но гордая дизайн-студия из Краснодара</b>
-            <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет выше креатива.
+            <b>Мы маленькая, но гордая дизайн-студия из Краснодара.</b>
+            <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива.
                   Работаем не покладая рук, как роботы.</p>
             <h4>Выполняем заказы на разработку:</h4>
             <ul>
@@ -122,9 +129,9 @@
               </table>
             </figcaption>
           </figure>
-        </div>
       </section>
-      <section class="partners">
+      <div class="grey-line"></div>
+      <section class="partners container">
         <h3 class="visually-hidden">Партнеры дизайн-студии nerds</h3>
         <ul class="partners-items">
           <li class="partners-item">
@@ -141,36 +148,35 @@
           </li>
         </ul>
       </section>
-    </div>
+      <div class="grey-line second"></div>
       <section class="map">
         <h3 class="visually-hidden">Карта местоположения дизайн-студии nerds</h3>
         <img src="img/map-background.jpg" width="1440"  height="416" alt="карта расположения дизайн-студии nerds">
         <section class="footer-contacts">
           <h2 class="footer-contacts-header">Nёrds design studio</h2>
           <p>
-            191186, Санкт-Петербург, ул. Большая Конюшенная, д. 19/8<br>
-            тел. +7 (812) 275-75-75
+            191186, Санкт-Петербург, ул. Большая Конюшенная, д. 19/8
           </p>
-          <a class="button" href="#">напишите нам</a>
+          <p>  тел. +7 (812) 275-75-75
+          </p>
+          <a class="button footer-contacts-button" href="#">напишите нам</a>
         </section>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer wrapper">
       <h3 class="visually-hidden">Социальные сети и бонусная информация дизайн-студии nerds</h3>
-      <div class="footer">
-        <div class="footer-social-container">
-          <ul class="footer-social">
-            <li>
-              <a class="social-button social-button-vk" href="#">Вконтакте</a>
-            </li>
-            <li>
-              <a class="social-button social-button-fb" href="#">Фейсбук</a>
-            </li>
-            <li>
-              <a class="social-button social-button-inst" href="#">Инстаграм</a>
-            </li>
-          </ul>
-        </div>
+      <div class="footer container">
+        <ul class="footer-social">
+          <li>
+            <a class="social-button social-button-vk" href="#">Вконтакте</a>
+          </li>
+          <li>
+            <a class="social-button social-button-fb" href="#">Фейсбук</a>
+          </li>
+          <li>
+            <a class="social-button social-button-inst" href="#">Инстаграм</a>
+          </li>
+        </ul>
         <div class="footer-friends">
           <b>Давайте дружить, это выгодно!</b>
           <p>Скидка 10% для друзей из социальных сетей.</p>
