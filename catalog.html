@@ -9,6 +9,7 @@
   </head>
   <body>
     <header class="main-header wrapper">
+      <div class="container">
       <nav class="main-navigation container">
         <a class="main-header-logo" href="index.html">
           <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="160" height="65" viewBox="0 0 160 65">
@@ -28,6 +29,7 @@
           </li>
         </ul>
       </nav>
+    </div>
     </header>
     <main class="wrapper">
     <h1 class="catalog-main-header">Магазин готовых шаблонов</h1>
@@ -103,11 +105,10 @@
             </li>
           </ul>
         </fieldset>
-        <button class="button filter-button"type="submit">Показать</button>
+        <button class="button filter-button" type="submit">Показать</button>
       </form>
     </section>
-
-      <section class="catalog">
+    <section class="catalog">
         <h2 class="visually-hidden">Список и опция сортировки шаблонов</h2>
         <section class="sort">
           <h2 class="visually-hidden">Опция сортировки шаблонов</h2>
@@ -139,11 +140,9 @@
               <img src="img/sedona.jpg" width="360" height="576" alt="Шаблон &#171;Седона&#187;">
             </a>
             <div class="template-item-description">
-
                 <b>Sedona</b>
                 <p>Информационный сайт для туристов</p>
                 <a class="button template-item-description-button" href="#">9900 руб.</a>
-
             </div>
           </li>
           <li class="template-item">
@@ -154,11 +153,9 @@
               <img src="img/pink.jpg" width="360" height="576" alt="Шаблон &#171;пинк&#187;">
             </a>
             <div class="template-item-description">
-
                 <b>Pink app</b>
                 <p>Продуктовый лендинг для IOS и Android</p>
                 <a class="button template-item-description-button" href="#">9900 руб.</a>
-
             </div>
           </li>
           <li class="template-item">
@@ -169,11 +166,9 @@
               <img src="img/barbershop.jpg" width="360" height="576" alt="Шаблон &#171;барбершоп&#187;">
             </a>
             <div class="template-item-description">
-
                 <b>Barbershop</b>
                 <p>Сайт салона красоты. Для мужчин, да.</p>
                 <a class="button template-item-description-button" href="#">9900 руб.</a>
-
             </div>
           </li>
           <li class="template-item">
@@ -184,11 +179,9 @@
               <img src="img/mishka.jpg" width="360" height="576" alt="Шаблон &#171;мишка&#187;">
             </a>
             <div class="template-item-description">
-
                 <b>Mishka</b>
                 <p>ИНтернет-магазин вязаных игрушек</p>
                 <a class="button template-item-description-button" href="#">9900 руб.</a>
-
             </div>
           </li>
           <li class="template-item">
@@ -226,12 +219,12 @@
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item pagination-item-next"><a href="#">Следующая</a></li>
         </ul>
-        </div>
       </section>
-      <section class="map">
+    </div>
+      <section class="map-catalog">
         <h3 class="visually-hidden">Карта местоположения дизайн-студии nerds</h3>
         <div class="map-background">
-        <!-- <img class="map-picture" src="img/map-background.jpg" width="1440"  height="416" alt="карта расположения дизайн-студии nerds"> -->
+        <img class="visually-hidden" src="img/map-background.jpg" width="1440"  height="416" alt="карта расположения дизайн-студии nerds">
           <section class="footer-contacts">
             <h2 class="footer-contacts-header">Nёrds design studio</h2>
             <p>
@@ -240,7 +233,7 @@
             </p>
             <p>  тел. +7 (812) 275-75-75
             </p>
-            <a class="button footer-contacts-button" href="#">напишите нам</a>
+            <a class="button footer-contacts-button" href="modal.html">напишите нам</a>
           </section>
           </div>
         </section>
@@ -295,57 +288,11 @@
           <label for="contact-us-text"><b>Текст письма:</b></label>
           <textarea id="contact-us-text" rows="6" cols="250" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="button contact-us-button"type="submit">Отправить</button>
+        <button class="button contact-us-button" type="submit">Отправить</button>
         </div>
       </form>
       </section>
     </footer>
-    <script>
-    var link = document.querySelector(".footer-contacts-button");
-    var popup = document.querySelector(".contact-us");
-    var close = popup.querySelector(".modal-close");
-    var username = popup.querySelector("#contact-us-username");
-    var email = popup.querySelector("#contact-us-email");
-    var form = popup.querySelector("contact-form");
-    var storage = localStorage.getItem("username");
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-      if (storage) {
-     username.value = storage;
-     email.focus();
-   } else {
-     username.focus();
-   }
-  });
-
-  close.addEventListener("click", function (evt) {
-   evt.preventDefault();
-   popup.classList.remove("modal-show");
-   popup.classList.remove("modal-error");
- });
-
-
- form.addEventListener("submit", function (evt) {
-   if (!username.value || !email.value) {
-     evt.preventDefault();
-     popup.classList.remove("modal-error");
-     popup.offsetWidth = popup.offsetWidth;
-     popup.classList.add("modal-error");
-       } else {
-    localStorage.setItem("username", username.value);
-  }
-  });
-
-  window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (popup.classList.contains("modal-show")) {
-      popup.classList.remove("modal-show");
-      popup.classList.remove("modal-error");
-    }
-  }
-});
-</script>
+    <script src="js/nerds.js"></script>
   </body>
 </html>

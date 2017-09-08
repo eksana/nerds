@@ -9,7 +9,8 @@
   </head>
   <body>
     <header class="wrapper main-header">
-      <nav class="container main-navigation">
+      <div class="container">
+      <nav class="main-navigation">
         <a class="main-header-logo">
           <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="160" height="65" viewBox="0 0 160 65">
             <title>Логотип Nerds-дизайн-студии из Краснодара</title>
@@ -28,10 +29,12 @@
           </li>
         </ul>
       </nav>
+      </div>
     </header>
     <main class="wrapper">
       <h1 class="visually-hidden">nerds-дизайн-студия из Краснодара</h1>
       <section class="features">
+        <div class="container">
         <h2 class="visually-hidden">Преимущества дизайн-студии nerds</h2>
         <div class="slider">
           <input type="radio" id="btn-1" name="toggle" checked>
@@ -71,6 +74,7 @@
             </div>
           </div>
         </div>
+      </div>
       </section>
       <section class="services container">
         <h3 class="visually-hidden">Услуги дизайн-студии nerds</h3>
@@ -131,7 +135,7 @@
         <div class="description-partners">
         <ul class="partners-items">
           <li class="partners-item">
-            <img src="img/htmlacademy.png" width="199"  height="68" alt="Логотип компании html academy - партнера дизайн-студии nerds">
+            <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/htmlacademy.png" width="199"  height="68" alt="Логотип компании html academy - партнера дизайн-студии nerds"></a>
           </li>
           <li class="partners-item">
             <img src="img/borodinski.png" width="209"  height="90" alt="Логотип компании barbershop borodinski - партнера дизайн-студии nerds">
@@ -149,7 +153,7 @@
       <section class="map">
         <h3 class="visually-hidden">Карта местоположения дизайн-студии nerds</h3>
         <div class="map-background">
-        <!-- <img class="map-picture" src="img/map-background.jpg" width="1440"  height="416" alt="карта расположения дизайн-студии nerds"> -->
+        <img class="visually-hidden" src="img/map-background.jpg" width="1440"  height="416" alt="карта расположения дизайн-студии nerds">
           <section class="footer-contacts">
             <h2 class="footer-contacts-header">Nёrds design studio</h2>
             <p>
@@ -158,7 +162,7 @@
             </p>
             <p>  тел. +7 (812) 275-75-75
             </p>
-            <a class="button footer-contacts-button" href="#">напишите нам</a>
+            <a class="button footer-contacts-button" href="modal.html">напишите нам</a>
           </section>
           </div>
         </section>
@@ -213,57 +217,11 @@
           <label for="contact-us-text"><b>Текст письма:</b></label>
           <textarea id="contact-us-text" rows="6" cols="250" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="button contact-us-button"type="submit">Отправить</button>
+        <button class="button contact-us-button" type="submit">Отправить</button>
         </div>
       </form>
       </section>
     </footer>
-    <script>
-    var link = document.querySelector(".footer-contacts-button");
-    var popup = document.querySelector(".contact-us");
-    var close = popup.querySelector(".modal-close");
-    var username = popup.querySelector("#contact-us-username");
-    var email = popup.querySelector("#contact-us-email");
-    var form = popup.querySelector("contact-form");
-    var storage = localStorage.getItem("username");
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-      if (storage) {
-     username.value = storage;
-     email.focus();
-   } else {
-     username.focus();
-   }
-  });
-
-  close.addEventListener("click", function (evt) {
-   evt.preventDefault();
-   popup.classList.remove("modal-show");
-   popup.classList.remove("modal-error");
- });
-
-
- form.addEventListener("submit", function (evt) {
-   if (!username.value || !email.value) {
-     evt.preventDefault();
-     popup.classList.remove("modal-error");
-     popup.offsetWidth = popup.offsetWidth;
-     popup.classList.add("modal-error");
-       } else {
-    localStorage.setItem("username", username.value);
-  }
-  });
-
-  window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (popup.classList.contains("modal-show")) {
-      popup.classList.remove("modal-show");
-      popup.classList.remove("modal-error");
-    }
-  }
-});
-</script>
+    <script src="js/nerds.js"></script>
   </body>
 </html>

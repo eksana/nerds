@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Нёрдс - главная страница</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+        <section class="contact-us-window">
+        <a href="index.html"><button class="modal-close" type="button">Закрыть</button></a>
+        <form class="contact-form" method="get" action="https://echo/htmlacademy.ru">
+        <h4 class="visually-hidden">Форма обратной связи с дизайн-студией nerds</h4>
+        <div class="contact-us-header">
+          <b>Напишите нам</b>
+      </div>
+      <div class="contact-us-user-data">
+        <p class="contact-us-item">
+          <label for="contact-us-username"><b>Ваше имя:</b></label>
+          <input id="contact-us-username" type="text" name="username" size="40" placeholder="Представьтесь, пожалуйста">
+        </p>
+        <p class="contact-us-item">
+          <label for="contact-us-email"><b>Ваш e-mail:</b></label>
+          <input id="contact-us-email" type="text" name="email" size="140" placeholder="Для отправки ответа">
+        </p>
+        </div>
+        <div class="contact-us-message">
+        <p class="contact-us-item">
+          <label for="contact-us-text"><b>Текст письма:</b></label>
+          <textarea id="contact-us-text" rows="6" cols="250" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button contact-us-button"type="submit"><a class="modal-page" href="modal.html">Отправить</a></button>
+        </div>
+      </form>
+    </section>
+
+  </body>
+</html>
