@@ -96,9 +96,9 @@
         </ul>
       </section>
       <section class="description-conditions">
-         <div class="container-descr-fl">
+         <div class="container-descr-conditions">
         <h3 class="visually-hidden">Описание и условия работы дизайн-студии nerds</h3>
-          <div class="description-fl">
+          <div class="description">
             <b>Мы маленькая, но гордая дизайн-студия из Краснодара.</b>
             <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива.
                   Работаем не покладая рук, как роботы.</p>
@@ -126,9 +126,9 @@
         </div>
       </section>
       <section class="partners">
-        <div class="container-descr-fl-second">
+        <div class="container-descr-partners">
         <h3 class="visually-hidden">Партнеры дизайн-студии nerds</h3>
-        <div class="description-fl-second">
+        <div class="description-partners">
         <ul class="partners-items">
           <li class="partners-item">
             <img src="img/htmlacademy.png" width="199"  height="68" alt="Логотип компании html academy - партнера дизайн-студии nerds">
@@ -191,10 +191,14 @@
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
-      <section class="contact-us visually-hidden">
-        <form class="filter" method="get" action="https://echo/htmlacademy.ru">
+      <section class="contact-us">
+        <button class="modal-close" type="button">Закрыть</button>
+        <form class="contact-form" method="get" action="https://echo/htmlacademy.ru">
         <h4 class="visually-hidden">Форма обратной связи с дизайн-студией nerds</h4>
-        <b>Напишите нам</b>
+        <div class="contact-us-header">
+          <b>Напишите нам</b>
+      </div>
+      <div class="contact-us-user-data">
         <p class="contact-us-item">
           <label for="contact-us-username"><b>Ваше имя:</b></label>
           <input id="contact-us-username" type="text" name="username" size="40" placeholder="Представьтесь, пожалуйста">
@@ -203,13 +207,63 @@
           <label for="contact-us-email"><b>Ваш e-mail:</b></label>
           <input id="contact-us-email" type="text" name="email" size="140" placeholder="Для отправки ответа">
         </p>
+        </div>
+        <div class="contact-us-message">
         <p class="contact-us-item">
           <label for="contact-us-text"><b>Текст письма:</b></label>
           <textarea id="contact-us-text" rows="6" cols="250" placeholder="В свободной форме"></textarea>
         </p>
         <button class="button contact-us-button"type="submit">Отправить</button>
+        </div>
       </form>
       </section>
     </footer>
+    <script>
+    var link = document.querySelector(".footer-contacts-button");
+    var popup = document.querySelector(".contact-us");
+    var close = popup.querySelector(".modal-close");
+    var username = popup.querySelector("#contact-us-username");
+    var email = popup.querySelector("#contact-us-email");
+    var form = popup.querySelector("contact-form");
+    var storage = localStorage.getItem("username");
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+      if (storage) {
+     username.value = storage;
+     email.focus();
+   } else {
+     username.focus();
+   }
+  });
+
+  close.addEventListener("click", function (evt) {
+   evt.preventDefault();
+   popup.classList.remove("modal-show");
+   popup.classList.remove("modal-error");
+ });
+
+
+ form.addEventListener("submit", function (evt) {
+   if (!username.value || !email.value) {
+     evt.preventDefault();
+     popup.classList.remove("modal-error");
+     popup.offsetWidth = popup.offsetWidth;
+     popup.classList.add("modal-error");
+       } else {
+    localStorage.setItem("username", username.value);
+  }
+  });
+
+  window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+    }
+  }
+});
+</script>
   </body>
 </html>

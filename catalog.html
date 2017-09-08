@@ -273,9 +273,14 @@
           <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
-      <section class="contact-us visually-hidden">
+      <section class="contact-us">
+        <button class="modal-close" type="button">Закрыть</button>
+        <form class="contact-form" method="get" action="https://echo/htmlacademy.ru">
         <h4 class="visually-hidden">Форма обратной связи с дизайн-студией nerds</h4>
-        <b>Напишите нам</b>
+        <div class="contact-us-header">
+          <b>Напишите нам</b>
+      </div>
+      <div class="contact-us-user-data">
         <p class="contact-us-item">
           <label for="contact-us-username"><b>Ваше имя:</b></label>
           <input id="contact-us-username" type="text" name="username" size="40" placeholder="Представьтесь, пожалуйста">
@@ -284,11 +289,63 @@
           <label for="contact-us-email"><b>Ваш e-mail:</b></label>
           <input id="contact-us-email" type="text" name="email" size="140" placeholder="Для отправки ответа">
         </p>
+        </div>
+        <div class="contact-us-message">
         <p class="contact-us-item">
           <label for="contact-us-text"><b>Текст письма:</b></label>
           <textarea id="contact-us-text" rows="6" cols="250" placeholder="В свободной форме"></textarea>
         </p>
+        <button class="button contact-us-button"type="submit">Отправить</button>
+        </div>
+      </form>
       </section>
     </footer>
+    <script>
+    var link = document.querySelector(".footer-contacts-button");
+    var popup = document.querySelector(".contact-us");
+    var close = popup.querySelector(".modal-close");
+    var username = popup.querySelector("#contact-us-username");
+    var email = popup.querySelector("#contact-us-email");
+    var form = popup.querySelector("contact-form");
+    var storage = localStorage.getItem("username");
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+      if (storage) {
+     username.value = storage;
+     email.focus();
+   } else {
+     username.focus();
+   }
+  });
+
+  close.addEventListener("click", function (evt) {
+   evt.preventDefault();
+   popup.classList.remove("modal-show");
+   popup.classList.remove("modal-error");
+ });
+
+
+ form.addEventListener("submit", function (evt) {
+   if (!username.value || !email.value) {
+     evt.preventDefault();
+     popup.classList.remove("modal-error");
+     popup.offsetWidth = popup.offsetWidth;
+     popup.classList.add("modal-error");
+       } else {
+    localStorage.setItem("username", username.value);
+  }
+  });
+
+  window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+    }
+  }
+});
+</script>
   </body>
 </html>
