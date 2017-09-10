@@ -1,4 +1,4 @@
-a, img, em, b, input,
+a, img, em, b,
 section, article, figure,
 fieldset {
   display: block;
@@ -1387,6 +1387,11 @@ input[type="radio"]:checked:hover + label::before {
 
 .price-controls {
   font-size: 0;
+}
+
+.price-controls input {
+  display: inline-block;
+  width: 260px;
 }
 
 .price-controls label {
